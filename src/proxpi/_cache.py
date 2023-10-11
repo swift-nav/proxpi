@@ -344,10 +344,11 @@ class _IndexCache:
     _package_locks: _Locks
     _index: t.Dict[str, str]
     _packages: t.Dict[str, Package]
-    _headers = {"Accept": (
-        "application/vnd.pypi.simple.v1+json, "
-        "application/vnd.pypi.simple.v1+html;q=0.1"
-    )}  # fmt: skip
+    _headers = {}
+#    _headers = {"Accept": (
+#        "application/vnd.pypi.simple.v1+json, "
+#        "application/vnd.pypi.simple.v1+html;q=0.1"
+#    )}  # fmt: skip
 
     def __init__(self, index_url: str, ttl: int, session: requests.Session = None):
         self.index_url = index_url
